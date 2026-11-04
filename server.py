@@ -6,7 +6,9 @@ import sys
 from pathlib import Path
 
 PORT = 8000
-HTML_FILE = Path(__file__).parent / "moscow_turgenev_walk.html"
+HTML_FILE = Path(__file__).parent / "index.html"
+if not HTML_FILE.exists():
+    HTML_FILE = Path(__file__).parent / "moscow_turgenev_walk.html"
 
 def get_ip_addresses():
     ips = set()
